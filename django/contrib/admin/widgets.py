@@ -273,6 +273,9 @@ class RelatedFieldWidgetWrapper(forms.Widget):
     def id_for_label(self, id_):
         return self.widget.id_for_label(id_)
 
+    def decompress(self, value):
+        return self.widget.decompress(value)
+
 class AdminTextareaWidget(forms.Textarea):
     def __init__(self, attrs=None):
         final_attrs = {'class': 'vLargeTextField'}
